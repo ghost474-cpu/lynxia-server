@@ -6,6 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+import cors from "cors";
+app.use(cors());
+app.use(express.json());
+
 const API_KEY = "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";
 
 app.post("/chat", async (req, res) => {
@@ -46,4 +50,5 @@ app.get("/", (req, res) => {
 
 const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`🚀 Serveur démarré sur le port ${PORT}`));
+
 
