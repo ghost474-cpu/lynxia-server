@@ -11,7 +11,7 @@ app.use(express.json());
 // ⚠️ لا تكرر import cors مرة ثانية!
 
 // 🔑 مفتاح API — الأفضل وضعه في متغير بيئة على Render
-const API_KEY = "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";
+const API_KEY = "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";
 
 // 🔹 نقطة المحادثة
 app.post("/chat", async (req, res) => {
@@ -26,7 +26,7 @@ app.post("/chat", async (req, res) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "gpt-3.5-turbo",
+        model: "mistralai/mixtral-8x7b-instruct",
         messages: [
           { role: "system", content: "Tu es un assistant amical parlant français." },
           { role: "user", content: prompt }
@@ -58,6 +58,7 @@ app.get("/", (req, res) => {
 // 🔹 Démarrage
 const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`🚀 Serveur démarré sur le port ${PORT}`));
+
 
 
 
