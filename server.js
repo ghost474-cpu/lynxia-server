@@ -45,7 +45,7 @@ app.post("/chat", async (req, res) => {
       res.json({ reply: data.choices[0].message.content });
     } else {
       console.error("Réponse inattendue:", data);
-      res.status(500).json({ reply: "❌ Le modèle n'a pas renvoyé de texte." });
+      res.json({ reply: data.choices?.[0]?.message?.content || "❌ Aucune réponse du modèle." });
     }
 
   } catch (error) {
@@ -62,3 +62,4 @@ app.get("/", (req, res) => {
 // 🔹 تشغيل السيرفر
 const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`🚀 Serveur lancé sur le port ${PORT}`));
+
