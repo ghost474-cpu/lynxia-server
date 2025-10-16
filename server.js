@@ -11,7 +11,7 @@ app.use(express.json());
 // ⚠️ لا تكرر import cors مرة ثانية!
 
 // 🔑 مفتاح API — الأفضل وضعه في متغير بيئة على Render
-const API_KEY = "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";
+const API_KEY = "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";
 
 // 🔹 نقطة المحادثة
 app.post("/chat", async (req, res) => {
@@ -58,6 +58,7 @@ app.get("/", (req, res) => {
 // 🔹 Démarrage
 const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`🚀 Serveur démarré sur le port ${PORT}`));
+
 
 
 
