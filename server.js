@@ -26,7 +26,7 @@ app.post("/chat", async (req, res) => {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${API_KEY}`,
-        "HTTP-Referer": "https://ton-site-ou-projet.com", // اختياري
+        "HTTP-Referer": "https://ghost474-cpu.github.io/LynxIA/", // اختياري
         "X-Title": "LynxIA Chatbot", // اسم مشروعك (اختياري)
         "Content-Type": "application/json"
       },
@@ -62,4 +62,5 @@ app.get("/", (req, res) => {
 // 🔹 تشغيل السيرفر
 const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`🚀 Serveur lancé sur le port ${PORT}`));
+
 
