@@ -31,7 +31,7 @@ app.post("/chat", async (req, res) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "sourceful/riverflow-v2-standard-preview", // نموذج مجاني وخفيف
+        model: "x-ai/grok-4.1-fast", // نموذج مجاني وخفيف
         messages: [
           { role: "system", content: "Tu es un assistant amical qui parle français." },
           { role: "user", content: prompt }
@@ -62,6 +62,7 @@ app.get("/", (req, res) => {
 // 🔹 تشغيل السيرفر
 const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`🚀 Serveur lancé sur le port ${PORT}`));
+
 
 
 
