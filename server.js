@@ -31,7 +31,7 @@ app.post("/chat", async (req, res) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "mistralai/mixtral-8x7b-instruct:free", // نموذج مجاني وخفيف
+        model: "bytedance-seed/seedream-4.5", // نموذج مجاني وخفيف
         messages: [
           { role: "system", content: "Tu es un assistant amical qui parle français." },
           { role: "user", content: prompt }
@@ -62,6 +62,7 @@ app.get("/", (req, res) => {
 // 🔹 تشغيل السيرفر
 const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`🚀 Serveur lancé sur le port ${PORT}`));
+
 
 
 
